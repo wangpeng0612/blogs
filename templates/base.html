@@ -1,10 +1,110 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8"/>
+    <!--    <title>Shimba Bootstrap 4 Admin Dashboard</title>-->
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta content="Beethemesdesign" name="author"/>
+
+    {%include 'css.html'%}
+
 </head>
+
 <body>
 
+<!-- Begin page -->
+<div class="wrapper">
+
+    <!-- ============================================================= -->
+    <!-- ===============    side menu content start  ================= -->
+    <!-- ============================================================= -->
+    <div class="left-side-menu">
+        <div class="slimscroll-menu">
+            <!-------------------------------------->
+            <!-- Put your logo hear in img tag -->
+<!--            <a href="#" class="logo">-->
+<!--                    <span class="logo-lg">-->
+<!--                        <img src="{% static 'images/logo.png'%}" alt="">-->
+<!--                    </span>-->
+<!--                <span class="logo-sm">-->
+<!--                        <img src="{% static 'images/logo_sm.png'%}" alt="">-->
+<!--                    </span>-->
+<!--            </a>-->
+
+            <ul class="metismenu side-nav">
+                {% include 'menu_item.html' %}
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="content-page">
+        <!-- content -->
+        {% block content %} {% endblock%}
+        <!-- ============================================================= -->
+        <!-- ===============    footer content start  ================= -->
+        <!-- ============================================================= -->
+
+        {% include 'footer.html'%}
+        <!-- ============================================================= -->
+        <!-- ===============    footer content start  ================= -->
+        <!-- ============================================================= -->
+
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- Required js -->
+<script src="{% static 'js/app.js'%}"></script>
+
+
+<!-- third party js -->
+<script src="{% static 'js/vendor/Chart.bundle.min.js'%}"></script>
+<script src="{% static 'js/vendor/jquery-jvectormap-1.2.2.min.js'%}"></script>
+<script src="{% static 'js/vendor/jquery-jvectormap-world-mill-en.js'%}"></script>
+<!-- third party js ends -->
+
+<!-- third party:js -->
+<script src="{% static 'js/vendor/apexcharts.min.js'%}"></script>
+
+<!-- demo app -->
+<script src="{% static 'js/demo/demo.dashboard.js'%}"></script>
+<!-- end demo js-->
+
+<script src="{% static 'js/jquery.min.js'%}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<!-- Popper js -->
+<script src="{% static 'js/popper.min.js'%}"></script>
+<!-- Owl carousel js -->
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<!-- Masonary js -->
+<script src="{% static 'js/masonary.min.js'%}"></script>
+<!-- News Ticker js -->
+<script src="{% static 'js/breaking-news-ticker.min.js'%}"></script>
+<!-- Trackpad Scroll js -->
+<script src="{% static 'js/jquery.trackpad-scroll-emulator.min.js'%}"></script>
+<!-- Sticky ResizeSensor js -->
+<script src="{% static 'js/ResizeSensor.min.js'%}"></script>
+<!-- Sticky Sidebar js -->
+<script src="{% static 'js/theia-sticky-sidebar.min.js'%}"></script>
+<!-- Plugin js -->
+<script src="{% static 'js/plugins.js'%}"></script>
+<!-- main js -->
+<script src="{% static 'js/main.js'%}"></script>
 </body>
+
 </html>
